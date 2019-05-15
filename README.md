@@ -13,7 +13,7 @@ Create Read Update and Delete framework using JS
  ### Advanced Reqs
 - [ ] Item that I added goes here...
 
-ezClapGG/Loadout/LoadOutGG/CompactUtilityNavigationTool
+ezClapGG/Loadout/LoadOutGG/CompactUtilityNavigationTool/FartNoisesTheWebsite
 Gaming companion
 
 ezClapGG stores your builds/loadouts for multiple games in one place. No more searching google in the middle of a game for builds. Find it once and save it to your profile. Supports multiple mobas/fps's blah blah blah
@@ -26,6 +26,8 @@ to do:
   build objects containing item names prices
   character names and skills
 -links to popular build sites for each game
--potentially push builds to social media? 
+-potentially option to link to social media and post builds? 
+-make builds save public/private and be searchable by other users
+-vote counter for builds which pushes them up or down when searched. 
 
 
