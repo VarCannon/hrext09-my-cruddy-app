@@ -45,7 +45,7 @@ var keyExists = function(key) {
 //event handlers for the buttons and ... possibly the inputboxes
   //preventdefault on button clicks
 $(document).ready(function() {
-  $('#createButton').click(function(event) {
+  $("#createButton").click(function(event) {
     event.preventDefault();
 
     var currentKey = $("#keyInput").val();
@@ -57,7 +57,7 @@ $(document).ready(function() {
     }
   });
 
-  $('#updateButton').click(function(event) {
+  $("#updateButton").click(function(event) {
     event.preventDefault();
 
     var currentKey = $("#keyInput").val();
@@ -67,6 +67,13 @@ $(document).ready(function() {
     } else {
       //current key doesnt exist, do stuff
     }
+  });
+  $("#newLObutton").click(function(event) {
+    console.log("I've done been clicked on");
+    $("#newLObutton").hide();
+    $("#savedLObutton").hide();
+    $("<div class=heroes>heroes</div>").appendTo(".home");
+    $("<button id=back>back</button>").appendTo(".home");
   });
 });
 
