@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ezClapGG</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -10,12 +11,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 </head>
 <body>
-  <form>
-    <input id="keyInput" type="text" placeholder="key"></input>
-    <input id="valueInput" type="text" placeholder="value"></input>
-    <button id="createButton" type='submit'>Create</button>
-    <button id="updateButton" type='submit'>Update</button>
-  </form>
-  <script src='app/app.js'></script>
+  <h1>ezClapGG</h1>
+  <script src="app/app.js"></script>
+  <div class="createNew">
+    <button id="newLObutton">create new load out</button>
+  </div>
+  <div class="savedGames">
+    <button id="savedLObutton">view saved load outs</button>
+  </div>
 </body>
 </html>
+
+
+<!--     <form>
+      <input id="keyInput" type="text" placeholder="key"></input>
+      <input id="valueInput" type="text" placeholder="value"></input>
+      <button id="createButton" type='submit'>Save</button>
+      <button id="updateButton" type='submit'>Update</button>
+    </form> -->
