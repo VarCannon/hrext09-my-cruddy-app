@@ -69,12 +69,25 @@ $(document).ready(function() {
     }
   });
   $("#newLObutton").click(function(event) {
-    console.log("I've done been clicked on");
+    console.log("I've done been clicked on newLObutton");
     $("#newLObutton").hide();
     $("#savedLObutton").hide();
+    $("<button class=backbutton>back</button>").click(function(event) {
+      console.log("clicked back button");
+      $("#newLObutton").show();
+      $("#savedLObutton").show();
+      $(".backbutton").remove();
+      $(".heroes").remove();     
+    }).appendTo(".home")
     $("<div class=heroes>heroes</div>").appendTo(".home");
-    $("<button id=back>back</button>").appendTo(".home");
-  });
+    var backbutton = $("<button class=backbutton>back</button>").click(function(event) {
+      console.log("clicked back button");
+      $("#newLObutton").show();
+      $("#savedLObutton").show();
+      $(".backbutton").remove();
+      $(".heroes").remove();     
+    }).appendTo(".home")
+  })
 });
 
 
