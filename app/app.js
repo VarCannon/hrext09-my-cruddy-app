@@ -124,7 +124,8 @@ $(document).ready(function() {
       $("#newLObutton").show();
       $("#savedLObutton").show();
       $(".backbutton").remove();
-      $(".heroes").remove();     
+      $(".heroes").remove();
+      $("<a href='https://i.imgur.com/STxkhA0.png'><img src='mango.png'></a>").appendTo(".home")    
     }).appendTo(".home")
   })
 });
