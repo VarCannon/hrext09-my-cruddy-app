@@ -51,7 +51,7 @@ $(document).ready(function() {
   for (let i in heroes) {
     for (let j in heroes[i]) {
       if (j === 'icon_url') {
-        thumbs.push(heroes[i][j]);
+        thumbs.push(heroes[i][j]['92x93']);
       }
     }
   }
@@ -92,8 +92,12 @@ $(document).ready(function() {
       $(".backbutton").remove();
       $(".heroes").remove();     
     }).appendTo(".home")
-    $("<div class=heroes></div>").appendTo(".heroesContainer");
-    $(".heroes").html(JSON.stringify(thumbs));
+    $("<div class=heroes></div>").appendTo(".home");
+    $.each(thumbs, function(i){
+      $("<button class='herobutton'><img src='"+ thumbs[i] +"'/></button").click(function(event) {
+        console.log('save this character as a key and link to trait options')
+      }).appendTo(".heroes")
+    })
     var backbutton = $("<button class=backbutton>back</button>").click(function(event) {
       console.log("clicked back button");
       $("#newLObutton").show();
@@ -105,9 +109,6 @@ $(document).ready(function() {
 });
 
 
-// for (let obj in heroes) {
-//   if (obj['icon_url']) {
-//     console.log(obj['icon_url'])
-//   }
-// }
+// $.each(thumbs, $"<button class=herobutton></button")
+
 
