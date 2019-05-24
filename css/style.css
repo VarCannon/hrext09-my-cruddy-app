@@ -1,7 +1,18 @@
 /*
   input boxes
   buttons
+
 */
+
+body {
+	display: flex;
+	justify-content: center;
+
+}
+
+h1 {
+  justify-content: center;
+}
 
 #createButton {
 	height: 100px;
