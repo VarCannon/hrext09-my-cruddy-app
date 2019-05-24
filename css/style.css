@@ -12,6 +12,7 @@ body {
 
 h1 {
   justify-content: center;
+  
 }
 
 #createButton {
@@ -22,4 +23,12 @@ h1 {
 .herobutton {
 	height: 93px;
 	width: 92px;
+}
+
+#newLObutton {
+
+}
+
+.talents {
+
 }

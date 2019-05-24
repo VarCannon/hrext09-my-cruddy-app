@@ -101,11 +101,18 @@ $(document).ready(function() {
         $("#savedLObutton").hide();
         $(".heroes").remove(); 
         $("<div class='talents'></div>").appendTo(".home");
-        $("<p>Current Character Name!</p>").appendTo(".talents");
-        $("<div class=level1></div>").appendTo(".talents");
+        $("<p>"+ heroes[i].name +"</p>").appendTo(".talents");
+        $("<div class=level1>Level 1 Talents</div>").appendTo(".talents");
         $("<button id=1a>First Talent</button>").appendTo(".level1");
         $("<button id=1b>Second Talent</button>").appendTo(".level1");
         $("<button id=1c>Third Talent</button>").appendTo(".level1");
+        $(".level1").click(function(event) {
+          $("<div class=level4>Level 4 Talents</div>").appendTo(".talents");
+        $("<button id=4a>First Talent</button>").appendTo(".level4");
+        $("<button id=4b>Second Talent</button>").appendTo(".level4");
+        $("<button id=4c>Third Talent</button>").appendTo(".level4");
+        $(".level1").hide();
+        });
         $("#bottom").hide();
       }).appendTo(".heroes")
     })
