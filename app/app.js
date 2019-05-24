@@ -45,6 +45,19 @@ var keyExists = function(key) {
 //event handlers for the buttons and ... possibly the inputboxes
   //preventdefault on button clicks
 $(document).ready(function() {
+
+  var getThumbs = function() {
+  thumbs = [];
+  for (let i in heroes) {
+    for (let j in heroes[i]) {
+      if (j === 'icon_url') {
+        thumbs.push(heroes[i][j]);
+      }
+    }
+  }
+  return thumbs;
+}();
+
   $("#createButton").click(function(event) {
     event.preventDefault();
 
@@ -79,7 +92,8 @@ $(document).ready(function() {
       $(".backbutton").remove();
       $(".heroes").remove();     
     }).appendTo(".home")
-    $("<div class=heroes>heroes</div>").appendTo(".home");
+    $("<div class=heroes></div>").appendTo(".heroesContainer");
+    $(".heroes").html(JSON.stringify(thumbs));
     var backbutton = $("<button class=backbutton>back</button>").click(function(event) {
       console.log("clicked back button");
       $("#newLObutton").show();
@@ -90,4 +104,10 @@ $(document).ready(function() {
   })
 });
 
+
+// for (let obj in heroes) {
+//   if (obj['icon_url']) {
+//     console.log(obj['icon_url'])
+//   }
+// }
 
