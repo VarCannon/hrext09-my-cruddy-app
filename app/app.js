@@ -90,15 +90,26 @@ $(document).ready(function() {
       $("#newLObutton").show();
       $("#savedLObutton").show();
       $(".backbutton").remove();
-      $(".heroes").remove();     
+      $(".heroes").remove();
+      $(".talents").remove();     
     }).appendTo(".home")
     $("<div class=heroes></div>").appendTo(".home");
     $.each(thumbs, function(i){
       $("<button class='herobutton'><img src='"+ thumbs[i] +"'/></button").click(function(event) {
         console.log('save this character as a key and link to trait options')
+        $("#newLObutton").hide();
+        $("#savedLObutton").hide();
+        $(".heroes").remove(); 
+        $("<div class='talents'></div>").appendTo(".home");
+        $("<p>Current Character Name!</p>").appendTo(".talents");
+        $("<div class=level1></div>").appendTo(".talents");
+        $("<button id=1a>First Talent</button>").appendTo(".level1");
+        $("<button id=1b>Second Talent</button>").appendTo(".level1");
+        $("<button id=1c>Third Talent</button>").appendTo(".level1");
+        $("#bottom").hide();
       }).appendTo(".heroes")
     })
-    var backbutton = $("<button class=backbutton>back</button>").click(function(event) {
+    var backbutton = $("<button id=bottom class=backbutton>back</button>").click(function(event) {
       console.log("clicked back button");
       $("#newLObutton").show();
       $("#savedLObutton").show();
