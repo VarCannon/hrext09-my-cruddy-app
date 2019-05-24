@@ -106,12 +106,15 @@ $(document).ready(function() {
         $("<button id=1a>First Talent</button>").appendTo(".level1");
         $("<button id=1b>Second Talent</button>").appendTo(".level1");
         $("<button id=1c>Third Talent</button>").appendTo(".level1");
-        $(".level1").click(function(event) {
+        $("#1a, #1b, #1c").click(function(event) {
           $("<div class=level4>Level 4 Talents</div>").appendTo(".talents");
-        $("<button id=4a>First Talent</button>").appendTo(".level4");
-        $("<button id=4b>Second Talent</button>").appendTo(".level4");
-        $("<button id=4c>Third Talent</button>").appendTo(".level4");
-        $(".level1").hide();
+          $("<button id=4a>First Talent</button>").appendTo(".level4");
+          $("<button id=4b>Second Talent</button>").appendTo(".level4");
+          $("<button id=4c>Third Talent</button>").appendTo(".level4");
+          createItem(heroes[i].name, JSON.stringify([$(this).text()]))
+          console.log(this);
+          $(".level1").hide();
+
         });
         $("#bottom").hide();
       }).appendTo(".heroes")
